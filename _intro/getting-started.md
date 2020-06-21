@@ -1,41 +1,40 @@
-# Getting Started
+# Начало работы
 
-## Important
+## Важно
 
-Before proceeding, it is important to have a good understanding of the [SubModule.xml](../_xmldocs/submodule.md) file, as this file tells the game what it should be loading when your mod is selected.
+Перед началом работы, очень важно хорошо понимать, для чего служит файл [SubModule.xml](../_xmldocs/submodule.md), так как этот файл сообщает игре, что должно быть загружено для корректной работы мода, когда он выбран.
 
-## Tools
+## Инструменты
 
-### C# IDE
+### Интегрированная среда разработки C# (IDE)
 
-* [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/) (not required for basic mods)
+* [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/) (не требуется для базовых модификаций)
 
-### Text Editor
+### Редакторы кода
 
-Any text editor will suffice, but one of these is recommended...
+Подойдёт любой редактор кода, но рекомендуются следующие
 
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [Sublime Text](https://www.sublimetext.com/)  
 * [Notepad++](https://notepad-plus-plus.org/downloads/)
 
-## Modding without C#
+## Моддинг без использования C#
 
-There are several aspects of the game you can mod without C#. This includes scenes, items, cultures, characters, Gauntlet UIs, and many more.
+Вы можете модифицировать некоторые аспекты игры без использования C#. К таким аспектам относятся: сцены, предметы, культуры, персонажи, Gauntlet UIs и многое другое
 
-## Modding with C#
+## Моддинг с использованием C#
 
-The module-based modding system makes modding in Bannerlord much easier than past games in the series and allows for much more complexity in your mods.
+Модульная система модификаций позволяет создавать моды для Bannerlord прощё, чем это было в предыдущих играх серии, а также, добавить в ваши моды больше глубины и сложности.
 
-## Creating a Module
+## Создание Модуля
 
-In Bannerlord an individual mod is called a Module and the only required part is the SubModule folder itself and a `SubModule.xml` file which informs the launcher of your mod.
+В Bannerlord каждую отдельную модификацию принято называть Модулем (Module). Для Модуля обязательно наличие каталога, название которого соотвествует названию модуля, например SubModule. Внутри каталога Модуля должен быть расположен xml файл, который также соотвествет названию каталога, в нашем случае, SubModule.xml. Данный файл информирует лаунчер игры о вашем моде.
 
-1. Create a new folder in the `Modules` directory in your game files, the name of the folder must be the name of your SubModule.
-2. Create a `SubModule.xml` file in your new folder. You can [see an example here](../_xmldocs/submodule.md) or find the [full documentation here](../_xmldocs/submodule.md)
+1. Для начала, создайте новый каталог в каталоге `Modules` в папке игры. В нашем случае, назовите каталог `SubModule`
+2. Создайте xml файл `SubModule.xml` в каталоге `SubModule`. Вы можете [ознакомиться с примером](../_xmldocs/submodule.md) или с [полной документацей](../_xmldocs/submodule.md) данного xml файла.
 
-## Next Steps
+## Следующие шаги
 
-- Refer to the [Folder Structure](folder-structure.md) page for additional information on what additional directories to add depending on the intended content of your mod.
-- Refer to the [Basic C# Mod](../_tutorials/basic-csharp-mod.md) page for an example of how to set up, build and run code in Bannerlord.
-- Refer to the [Modding Gauntlet UIs Without C#](../_tutorials/modding-gauntlet-without-csharp.md) page for information on how to mod Gauntlet UIs without using any C#.
-
+- Вы можете ознакомиться со [Структурой Модуля](folder-structure.md), для ознакомления с дополнительной информацией по директорям, которые могут содержать зависимости для контента вашей модификации
+- Вы можете создать [Базовую Модификацию на C#](../_tutorials/basic-csharp-mod.md) и понять на примере процесс работы с кодом Bannerlord, от разворота и до сборки
+- Вы можете узнать о [Modding Gauntlet UIs Without C#](../_tutorials/modding-gauntlet-without-csharp.md) для того, чтобы узнат, как модифицировать Gauntlet UIs без использования C#
