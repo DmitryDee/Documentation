@@ -1,21 +1,23 @@
 # SubModule (XML)
 
-## Element Descriptions
+## Описание Элементов
 
-* `Name` - The name of your Module.
-* `Id` - The id of your Module (do not use spaces).
-* `Version` - The current version of your Module.
-* `SinglePlayerModule` - Whether or not your module is meant for Single Player mode.
-* `MultiPlayerModule` - Whether or not your module is meant for Mutli Player mode.
-* `DependedModules` - Modules that your module requires in order to function properly.
-* `SubModules` - The SubModules (DLLs) that your modules consists of.
-* `Xmls` - Contains Paths to XML files in the ModuleData Folder(s).
+* `Name` - Название вашего Модуля
+* `Id` - Идентификатор вашего Модуля (не используйте в названии пробелы).
+* `Version` - Текущая версия вашего Модуля.
+* `SinglePlayerModule` - Указание на то, используется ли ваш Модуль для одиночной игры. Принимает true/false.
+* `MultiPlayerModule` - Указание на то, используется ли ваш Модуль для сетевой игры. Принимает true/false.
+* `DependedModules` - Модули-зависимости, наличие которых требуется вашему Модулю для правильной работы.
+* `SubModules` - Подмодули (DLLs), из которых состоят ваши модули.
+* `Xmls` - содержит пути к XML файлам в каталоге(ах) ModuleData.
 
 ## Important
 
+XML файлы двух разных модов (или одного и того же мода), но с одинаковыми id, объеденяются в ассеты и не перезаписываются. Однако, если два объекта не имеют своих XML, но имеют одинаковый id, они перезаписывают друг друга в очереде загрузки Модулей, что отражается в лаунчере. Это может быть полезно для перезаписи нативных ассетов.
+
 XMLs with the same id from two separate mods (or the same mod) will have their assets combined and **NOT** overwritten. However, if two objects within an XML have the same id (e.g. two items), they will Overwrite each other in ModLoading Order as seen in the Launcher. Knowing this can be useful for overwritting native assets.
 
-`MPClassDivisions` Is currently broken.
+На заметку! `MPClassDivisions` на данный момент сломан.
 
 ## Example
 
@@ -59,4 +61,3 @@ XMLs with the same id from two separate mods (or the same mod) will have their a
     </Xmls>
 </Module>
 ```
-
